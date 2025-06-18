@@ -1,0 +1,14 @@
+        'Battery Specifications: LiFePO₄ Cell';
+        '----------------------------------------';
+        'Nominal Voltage:         3.2 V';
+        'Full Charge Voltage:     4.2 V';
+        'Cutoff Voltage:          2.7 V';
+        'Nominal Capacity:        2.7 Ah';
+        'Minimum Charge Rate:     0.3C';
+        'Minimum Discharge Rate:  0.3C';
+        'Maximum Charge Rate:     20C';
+        'Maximum Discharge Rate:  20C';
+        'Chemistry:               Lithium Iron Phosphate (LiFePO₄)';
+        'Cycle Life:              >4000 cycles @ 80% DoD';
+        'Temperature Range:       -20°C to 60°C';
+        '----------------------------------------';
