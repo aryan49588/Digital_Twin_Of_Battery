@@ -1,4 +1,4 @@
-%% Lead-Acid Battery with Dashboard Blocks
+%% Battery_GUI
 % 
 % This example shows how to model a lead-acid battery cell using the
 % Simscape(TM) language.
@@ -7,7 +7,7 @@
 % in Simscape as opposed to modeling entirely in Simulink(R) more clearly
 % relates the model components to the defining physical equations. For the
 % defining equations and their validation, see Jackey, R. "A Simple, Effective
-% Lead-Acid Battery Modeling Process for Electrical System Component
+% Battery_GUI Modeling Process for Electrical System Component
 % Selection", SAE World Congress & Exhibition, April 2007, ref.
 % 2007-01-0778.
 % 
@@ -21,7 +21,7 @@
 % block in series.
 % 
 % This model is constructed using the Simscape example library
-% LeadAcidBattery_lib. The library comes built and on your path so that it
+% lithium_Battery_lib. The library comes built and on your path so that it
 % is readily executable. However, it is recommended that you copy the
 % source files to a new directory, for which you have write permission, and
 % add that directory to your MATLAB(R) path. This will allow you to make
@@ -41,26 +41,26 @@
 
 %% Model
 
-open_system('LeadAcidBatteryWithDashboardBlocks')
+open_system('Lithium_Battery_1RC_Model')
 
 set_param(find_system(bdroot,'FindAll','on','type','annotation','Tag','ModelFeatures'),'Interpreter','off');
 
 %% Battery Cell Subsystem
 
-open_system('LeadAcidBatteryWithDashboardBlocks/Battery Cell','force')
+open_system('Lithium_Battery_1RC_Model/Battery Cell','force')
 
 %% Battery Thermal Model Subsystem
 
-open_system('LeadAcidBatteryWithDashboardBlocks/Battery Cell/Battery Thermal Model','force')
+open_system('Lithium_Battery_1RC_Model/Battery Cell/Battery Thermal Model','force')
 
 %% Simulation Results from Scopes
 
-set_param('LeadAcidBatteryWithDashboardBlocks/Battery Measurements','open','on');
-sim('LeadAcidBatteryWithDashboardBlocks');
+set_param('Lithium_Battery_1RC_Model/Battery Measurements','open','on');
+sim('Lithium_Battery_1RC_Model');
 
 %% 
 
-set_param('LeadAcidBatteryWithDashboardBlocks/Battery Measurements','open','off');
+set_param('Lithium_Battery_1RC_Model/Battery Measurements','open','off');
 %% Simulation Results from Simscape Logging
 %
 % The figure below shows the battery current and state of charge in a
@@ -68,7 +68,7 @@ set_param('LeadAcidBatteryWithDashboardBlocks/Battery Measurements','open','off'
 % by clicking the *View battery current SOC* hyperlink in the model canvas or
 % by clicking the *Data Inspector* button on the model *Simulation* tab.
 
-LeadAcidBatteryWithDashboardBlocksPlotISOC;
+Lithium_Battery_1RC_ModelPlotISOC;
 
 %%
 
